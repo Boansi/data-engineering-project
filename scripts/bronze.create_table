@@ -1,0 +1,65 @@
+--Creating tables for Bronze phase
+
+CREATE TABLE bronze.crm_customer_info (
+ customer_id INT,
+ customer_key NVARCHAR(50),
+ customer_firstname NVARCHAR(50),
+ customer_lastname NVARCHAR(50),
+ customer_marital_status NVARCHAR(50),
+ customer_gender NVARCHAR(50),
+ customer_createdate DATE
+);
+GO
+
+
+CREATE TABLE bronze.crm_production_info (
+ production_id INT,
+ production_key NVARCHAR(50),
+ production_name NVARCHAR(50),
+ production_cost INT,
+ production_line NVARCHAR(50),
+ production_start_dt DATETIME,
+ production_end_dt DATETIME
+);
+GO
+
+
+CREATE TABLE bronze.crm_sales_details (
+ sales_ord_num NVARCHAR(50),
+ sales_prd_key NVARCHAR(50),
+ sales_cust_id INT,
+ sales_order_dt INT,
+ sales_ship_dt INT,
+ sales_due_dt INT,
+ sales_sales INT,
+ sales_quantity INT,
+ sales_price INT
+);
+GO
+  
+
+
+CREATE TABLE bronze.erp_loc_a101 (
+  country_id NVARCHAR(50),
+  country NVARCHAR(50)
+);
+GO
+  
+
+
+CREATE TABLE bronze.erp_cust_az12 (
+   c_id NVARCHAR(50),
+   b_date DATE,
+   gender NVARCHAR(50)
+);
+GO
+  
+
+
+CREATE TABLE bronze.erp_px_cat_g1v2 (
+    id NVARCHAR(50),
+    cat NVARCHAR(50),
+    subcat NVARCHAR(50),
+    maintenance NVARCHAR(50)
+);
+GO
